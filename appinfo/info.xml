@@ -2,9 +2,9 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
 		xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>user_ispconfig</id>
-	<version>0.5.0</version>
+	<version>0.6.0</version>
 	<name>User support for ISPConfig mail accounts</name>
-	<summary>Allow users logging in using their mailbox credentials as managed via ISPConfig</summary>
+	<summary>Allow users logging in using their mailbox credentials as managed via ISPConfig (fork from Michael Fürmann)</summary>
 	<description lang="en"><![CDATA[Using this authentication provider you allow your users to use login credentials from their mailboxes as managed by ISPConfig 3 hosting controlpanel.
 
 To do so, you have to configure the URL of your panel server for API requests along with user credentials for a ISPConfig remote api user.
@@ -15,6 +15,8 @@ Furthermore, you can set default quota and group memberships for all newly creat
 For users from specific domains you can add individual quota and group settings and also allow them to use simplified usernames, e.g. instead of john@doe.com just john or john.doe. For more information on this, take a look at prefix, suffix and bare-name configuration contained in the Readme file.
 
 Requires SOAP PHP Extension to be installed and enabled and an ISPConfig remote user with permissions for Customer Functions, Server Functions, E-Mail User Functions.
+
+Thanks a lot to Michael Fürmann, Daniel Volk and Christian Weiske
 ]]></description>
 	<description lang="de"><![CDATA[Mit diesem Authentifizierungsprovider können sich Deine Nutzer mit ihren in ISPConfig 3 hinterlegten E-Mail Zugangsdaten auch in Nextcloud anmelden.
 
@@ -27,18 +29,20 @@ Es ist auch möglich, für Nutzer von bestimmten Domains abweichende Vorgaben f�
 Weitere Details dazu enthält der Konfigurations-Abschnitt der Admindokumentation.
 
 Benötigt SOAP PHP Extension installiert und aktiviert und einen ISPConfig Remote User mit Berechtigung für Customer Functions, Server Functions, E-Mail User Functions.
+
+Besten Dank an Michael Fürmann, Daniel Volk und Christian Weiske
 ]]></description>
 	<licence>agpl</licence>
-	<author mail="michael@spicyweb.de" homepage="https://spicyweb.de">Michael Fürmann</author>
+	<author mail="nextcloud-user-ispconfig@direct.ruetsche.com" homepage="https://4synergy.com">Ivo Rütsche</author>
 	<namespace>User_ISPConfig</namespace>
 	<category>integration</category>
 	<category>security</category>
 	<documentation>
-  		<admin>https://github.com/SpicyWeb-de/nextcloud-user-ispconfig</admin>
+  		<admin>https://github.com/ivoruetsche/nextcloud-user-ispconfig</admin>
   	</documentation>
-	<bugs>https://github.com/SpicyWeb-de/nextcloud-user-ispconfig/issues</bugs>
-	<website>https://github.com/SpicyWeb-de/nextcloud-user-ispconfig</website>
-	<repository type="git">https://github.com/SpicyWeb-de/nextcloud-user-ispconfig.git</repository>
+	<bugs>https://github.com/ivoruetsche/nextcloud-user-ispconfig/issues</bugs>
+	<website>https://github.com/ivoruetsche/nextcloud-user-ispconfig</website>
+	<repository type="git">https://github.com/ivoruetsche/nextcloud-user-ispconfig.git</repository>
 	<dependencies>
 		<nextcloud min-version="22" max-version="31" />
 		<lib>soap</lib>
